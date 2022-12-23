@@ -1,0 +1,1539 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <title>Subjects</title>
+</head>
+
+<body>
+    <div class="navigation">
+        <nav class="navbar fixed-top navbar-light bg-white">
+            <div class="container-fluid container-mobile">
+                <a class="navbar-brand" href="dashboard.html">
+                    <img src="assets/pilot-logo.svg" alt="logo" class="img-fluid">
+                </a>
+                <div class="d-flex gap-2 d-md-flex justify-content-md-end align-items-center container-div-mobile">
+                    <!-- <button class="btn btn-light me-md-2" type="button"><i class="fa fa-search" aria-hidden="true"></i></button> -->
+                    <form role="search" method="get" class="search-form top-nav-search-form hide-nav-btn-mobile"
+                        action="">
+                        <span class="position-relative">
+                            <i
+                                class="fa fa-2x fa-search top-nav-search position-absolute top-50 start-50 translate-middle"></i>
+                            <input type="search" class="search-field" placeholder="Search …" value="" name="s"
+                                title="Search for:" />
+                        </span>
+                        <input type="submit" class="search-submit" value="Search" />
+                    </form>
+
+                    <button type="button" class="btn btn-link text-dark  hide-nav-btn-mobile">
+                        <i class="fa-regular fa-2x fa-bell bell-parent"></i>
+                    </button>
+                    <button class="btn p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        <div class="admin-group hide-nav-btn-mobile">
+                            <img src="assets/profile2.svg" alt="" class="img-fluid rounded-circle" width="30">
+                            <span class="text-capitalize">admin</span>
+                        </div>
+                    </button>
+                    <div class="collapse position-absolute top-50 logout-btn-div" id="collapseExample">
+                        <button class="btn btn-outline-dark my-4 rounded-3 py-2 "><img src="./assets/logout-img.svg"
+                                alt="" class="me-3">Logout</button>
+                    </div>
+
+                </div>
+                <button class="btn  text-dark offcanvas-toggle-btn" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><i class="fa-solid fa-bars"></i>
+                </button>
+
+
+            </div>
+        </nav>
+    </div>
+    <div class="offcanvas offcanvas-start offcanvas-mobile-sidebar" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header position-absolute top-0 end-0 ">
+            <button type="button" class="btn-close text-reset " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="dashboard.html">
+                        <img src="../assets/pilot-logo.svg" alt="logo" class="img-fluid" width="120">
+                    </a>
+                </div>
+                <nav class="nav top-navigation side-nav flex-column text-capitalize">
+                    <a class="nav-link nav-link-navigation" href="dashboard.html">
+                        <span class=" my-span mx-2">
+                            <img src="./assets/dashboard-icon.svg" alt="">
+                        </span><span class="">Dashboard</span> </a>
+                    <a class="nav-link nav-link-navigation" href="orders.html">
+                        <span class="mx-2 my-span">
+                            <img src="./assets/order-icon.svg" alt="">
+                        </span><span class="">orders</span>
+                    </a>
+                    <a class="nav-link nav-link-navigation" href="registeredusers.html">
+                        <span class="mx-2 my-span">
+                            <img src="./assets/user-icon.svg" alt="">
+                        </span><span class="">users</span>
+                    </a>
+                    <a class="nav-link nav-link-navigation active " aria-current="page" href="subjectlist.html">
+                        <span class="mx-2 my-span">
+                            <img src="./assets/subject-icon.svg" alt="">
+                        </span><span class="">subjects</span>
+                    </a>
+                    <ul class="mb-0 ms-4 list-unstyled">
+                        <li>
+                            <a class="nav-link nav-link-navigation" href="subsubjectlist.html">
+                                <span class="mx-2 my-span">
+                                    <img src="" alt="">
+                                </span><span class="">mini subjects</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="nav-link nav-link-navigation" href="combolist.html">
+                        <span class="mx-2 my-span">
+                            <img src="./assets/combo-icon.svg" alt="">
+                        </span><span class="">combo</span>
+                    </a>
+                    <a class="nav-link nav-link-navigation" href="questionbanklist.html">
+                        <span class="mx-2 my-span">
+                            <img src="./assets/question-bank-icon.svg" alt="">
+                        </span><span class=""> question bank</span>
+                    </a>
+                    <a class="nav-link nav-link-navigation" href="reportedquestions.html">
+                        <span class="mx-2 my-span">
+                            <img src="./assets/reported-question-icon.svg" alt="">
+                        </span><span class="">Reported Questions</span>
+                    </a>
+                    <a class="nav-link nav-link-navigation" href="couponlist.html">
+                        <span class="mx-2 my-span">
+                            <img src="./assets/coupon-icon.svg" alt="">
+                        </span><span class="">Coupon Codes</span></a>
+                    <a class="nav-link nav-link-navigation" href="promotion.html">
+                        <span class="mx-2 my-span">
+                            <img src="./assets/promotion-icon.svg" alt="">
+                        </span><span class="">Promotions</span></a>
+                </nav>
+                <div>
+
+                    <hr>
+                    <div class="d-flex ms-2 my-4 flex-column">
+
+                        <div class="admin-group">
+                            <img src="assets/profile2.svg" alt="" class="img-fluid rounded-circle me-3" width="40">
+                            <span class="text-capitalize fw-bold">admin</span>
+                        </div>
+                        <button class="btn btn-outline-dark my-4 rounded-3 py-2 text-dark"><img
+                                src="./assets/logout-img.svg" alt="" class="me-3">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-block">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-md-2  desktop-sidebar">
+                    <nav class="nav top-navigation flex-column text-capitalize">
+                        <a class="nav-link nav-link-navigation" href="dashboard.html">
+                            <span class=" my-span mx-2">
+                                <img src="./assets/dashboard-icon.svg" alt="">
+                            </span><span class="">Dashboard</span> </a>
+                        <a class="nav-link nav-link-navigation" href="orders.html">
+                            <span class="mx-2 my-span">
+                                <img src="./assets/order-icon.svg" alt="">
+                            </span><span class="">orders</span>
+                        </a>
+                        <a class="nav-link nav-link-navigation" href="registeredusers.html">
+                            <span class="mx-2 my-span">
+                                <img src="./assets/user-icon.svg" alt="">
+                            </span><span class="">users</span>
+                        </a>
+                        <a class="nav-link nav-link-navigation active " aria-current="page" href="subjectlist.html">
+                            <span class="mx-2 my-span">
+                                <img src="./assets/subject-icon.svg" alt="">
+                            </span><span class="">subjects</span>
+                        </a>
+                        <ul class="mb-0 list-unstyled">
+                            <li class="">
+                                <a class="nav-link nav-link-navigation" href="subsubjectlist.html">
+                                    <span class="mx-2 me-4 my-span">
+                                        <img src="" alt="">
+                                    </span><span class="">mini subjects</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <a class="nav-link nav-link-navigation" href="combolist.html">
+                            <span class="mx-2 my-span">
+                                <img src="./assets/combo-icon.svg" alt="">
+                            </span><span class="">combo</span>
+                        </a>
+                        <a class="nav-link nav-link-navigation" href="questionbanklist.html">
+                            <span class="mx-2 my-span">
+                                <img src="./assets/question-bank-icon.svg" alt="">
+                            </span><span class=""> question bank</span>
+                        </a>
+                        <a class="nav-link nav-link-navigation" href="reportedquestions.html">
+                            <span class="mx-2 my-span">
+                                <img src="./assets/reported-question-icon.svg" alt="">
+                            </span><span class="">Reported Questions</span>
+                        </a>
+                        <a class="nav-link nav-link-navigation" href="couponlist.html">
+                            <span class="mx-2 my-span">
+                                <img src="./assets/coupon-icon.svg" alt="">
+                            </span><span class="">Coupon Codes</span></a>
+                        <a class="nav-link nav-link-navigation" href="promotion.html">
+                            <span class="mx-2 my-span">
+                                <img src="./assets/promotion-icon.svg" alt="">
+                            </span><span class="">Promotions</span></a>
+                    </nav>
+                </div>
+                <div class="col-md-12 col-lg-10 bg-light px-4">
+                    <div class="bread-crumb-block">
+                        <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+                            aria-label="breadcrumb" class="my-4">
+                            <ol class="breadcrumb text-capitalize">
+                                <li class="breadcrumb-item"><i class="fa fa-home me-2" aria-hidden="true"></i>
+                                    <a href="dashboard.html">dashboard</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">Subjects</li>
+                            </ol>
+                        </nav>
+                        <p class="h3 text-capitalize text-dark text-bold">Subjects</p>
+                        <a href="addsubjects.html"><button class="add-order-btn">Add Subject +</button></a>
+                        <hr>
+                        <div class="row" id="report-block">
+
+                            <div class="col-md-12 pb-5">
+                                <ul class="nav nav-pills list-item" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                            data-bs-target="#home-tab-pane" type="button" role="tab"
+                                            aria-controls="home-tab-pane" aria-selected="true">All (6)</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                            data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                            aria-controls="profile-tab-pane" aria-selected="false">Active (5)</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                            data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                            aria-controls="contact-tab-pane" aria-selected="false">Draft (1)</button>
+                                    </li>
+
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active " id="home-tab-pane" role="tabpanel"
+                                        aria-labelledby="home-tab" tabindex="0">
+                                        <!-- display if no subjects added -->
+                                        <div class="d-flex align-items-center no-subjects-mobile">
+                                            <span class="m-4"><img src="../assets/board.png" alt=""></span>
+                                            <!-- <span class="d-flex flex-column col-md-10"> -->
+                                            <span class="">
+
+                                                <h3>You’ve not added any subject yet</h3>
+                                                <p>Would you like to add one now ?</p>
+                                                <a href="addsubjects.html"><button class="btn btn-dark">Add Subject
+                                                        +</button></a>
+                                            </span>
+                                        </div>
+                                        <!-- display if no subjects added ends -->
+                                        <div class="custom-card-body">
+
+
+                                            <div class="list-item">
+
+                                                <div class="row px-2">
+                                                    <div onclick="myFunction()"
+                                                        class="text-decoration-none text-dark d-flex col-11">
+                                                        <div class="col-5">
+                                                            <h2>Air Meterology</h2>
+                                                            <p>Topics (10)</p>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <h3>Status</h3>
+                                                            <label class="green-label processing-btn">Published</label>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <h3>Date</h3>
+                                                            <p>5 Mins ago</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-1 border-start">
+                                                        <a href="subjectadded.html" class="text-decoration-none">
+                                                            <i class="fs-4 fa-sharp fa-solid fa-pen position-relative top-50 start-50 translate-middle"
+                                                                style="color:grey"></i>
+                                                        </a>
+
+                                                    </div>
+                                                    <div id="chart-div">
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn d-flex align-items-center">Change
+                                                                Difficulty
+                                                                <img src="../assets/arrow.svg" alt=""
+                                                                    class="mx-2"></button>
+                                                        </div>
+                                                        <hr>
+                                                        <div>
+                                                            <div class="d-flex">
+                                                                <div class="col-3">
+                                                                    <canvas id="myPieChart" class="col-sm-4"></canvas>
+                                                                </div>
+                                                                <div class="col-8 d-flex flex-column m-3">
+                                                                    <label for="customRange1"
+                                                                        class="form-label easy-label">Easy</label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange1">
+
+                                                                    <label for="customRange2"
+                                                                        class="form-label moderate-label">Moderate</label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange2">
+
+                                                                    <label for="customRange3"
+                                                                        class="form-label difficult-label">Difficult
+                                                                    </label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange3">
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex justify-content-end">
+                                                                <button class="btn btn-dark my-4 ">Save &
+                                                                    Publish</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="list-item">
+
+                                                <div class="row px-2">
+                                                    <div onclick="myFunction1()"
+                                                        class="text-decoration-none text-dark d-flex col-11">
+
+                                                        <div class="col-5">
+                                                            <h2>Air Navigation</h2>
+                                                            <p>Mini Subjects (4)</p>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <h3>Status</h3>
+                                                            <label class="orange-label on-hold-btn">Drafted</label>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <h3>Date</h3>
+                                                            <p>28th Nov</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-1 border-start">
+                                                        <a href="subjectadded.html" class="text-decoration-none">
+                                                            <i class="fs-4 fa-sharp fa-solid fa-pen position-relative top-50 start-50 translate-middle"
+                                                                style="color:grey"></i>
+                                                        </a>
+
+                                                    </div>
+                                                    <div id="chart-div1">
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn d-flex align-items-center">Change
+                                                                Difficulty
+                                                                <img src="../assets/arrow.svg" alt=""
+                                                                    class="mx-2"></button>
+                                                        </div>
+                                                        <hr>
+                                                        <div>
+                                                            <div class="d-flex">
+                                                                <div class="col-3">
+                                                                    <canvas id="myPieChart1" class="col-sm-4"></canvas>
+                                                                </div>
+                                                                <div class="col-8 d-flex flex-column m-3">
+                                                                    <label for="customRange1"
+                                                                        class="form-label easy-label">Easy</label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange1">
+
+                                                                    <label for="customRange2"
+                                                                        class="form-label moderate-label">Moderate</label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange2">
+
+                                                                    <label for="customRange3"
+                                                                        class="form-label difficult-label">Difficult
+                                                                    </label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange3">
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex justify-content-end">
+                                                                <button class="btn btn-dark my-4 ">Save &
+                                                                    Publish</button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </a>
+                                            </div>
+                                            <div class="list-item">
+                                                <div class="row px-2">
+                                                    <div onclick="myFunction2()"
+                                                        class="text-decoration-none text-dark d-flex col-11">
+
+                                                        <div class="col-5">
+                                                            <h2>Technical General</h2>
+                                                            <p>Topics (10)</p>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <h3>Status</h3>
+                                                            <label class="green-label processing-btn">Published</label>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <h3>Date</h3>
+                                                            <p>22nd Nov</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-1 border-start">
+                                                        <a href="subjectadded.html" class="text-decoration-none">
+                                                            <i class="fs-4 fa-sharp fa-solid fa-pen position-relative top-50 start-50 translate-middle"
+                                                                style="color:grey"></i>
+                                                        </a>
+
+                                                    </div>
+                                                    <div id="chart-div2">
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn d-flex align-items-center">Change
+                                                                Difficulty
+                                                                <img src="../assets/arrow.svg" alt=""
+                                                                    class="mx-2"></button>
+                                                        </div>
+                                                        <hr>
+                                                        <div>
+                                                            <div class="d-flex">
+                                                                <div class="col-3">
+                                                                    <canvas id="myPieChart2" class="col-sm-4"></canvas>
+                                                                </div>
+                                                                <div class="col-8 d-flex flex-column m-3">
+                                                                    <label for="customRange1"
+                                                                        class="form-label easy-label">Easy</label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange1">
+
+                                                                    <label for="customRange2"
+                                                                        class="form-label moderate-label">Moderate</label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange2">
+
+                                                                    <label for="customRange3"
+                                                                        class="form-label difficult-label">Difficult
+                                                                    </label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange3">
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex justify-content-end">
+                                                                <button class="btn btn-dark my-4 ">Save &
+                                                                    Publish</button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-item">
+                                                <div class="row px-2">
+                                                    <div onclick="myFunction3()"
+                                                        class="text-decoration-none text-dark d-flex col-11">
+
+                                                        <div class="col-5">
+                                                            <h2>RTR - A</h2>
+                                                            <p>Topics (10)</p>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <h3>Status</h3>
+                                                            <label class="green-label processing-btn">Published</label>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <h3>Date</h3>
+                                                            <p>1st Nov</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-1 border-start">
+                                                        <a href="subjectadded.html" class="text-decoration-none">
+                                                            <i class="fs-4 fa-sharp fa-solid fa-pen position-relative top-50 start-50 translate-middle"
+                                                                style="color:grey"></i>
+                                                        </a>
+
+                                                    </div>
+                                                    <div id="chart-div3">
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn d-flex align-items-center">Change
+                                                                Difficulty
+                                                                <img src="../assets/arrow.svg" alt=""
+                                                                    class="mx-2"></button>
+                                                        </div>
+                                                        <hr>
+                                                        <div>
+                                                            <div class="d-flex">
+                                                                <div class="col-3">
+                                                                    <canvas id="myPieChart3" class="col-sm-4"></canvas>
+                                                                </div>
+                                                                <div class="col-8 d-flex flex-column m-3">
+                                                                    <label for="customRange1"
+                                                                        class="form-label easy-label">Easy</label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange1">
+
+                                                                    <label for="customRange2"
+                                                                        class="form-label moderate-label">Moderate</label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange2">
+
+                                                                    <label for="customRange3"
+                                                                        class="form-label difficult-label">Difficult
+                                                                    </label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange3">
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex justify-content-end">
+                                                                <button class="btn btn-dark my-4 ">Save &
+                                                                    Publish</button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-item">
+                                                <div class="row px-2">
+                                                    <div onclick="myFunction4()"
+                                                        class="text-decoration-none text-dark d-flex col-11">
+
+                                                        <div class="col-5">
+                                                            <h2>Air Meterology</h2>
+                                                            <p>Topics (10)</p>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <h3>Status</h3>
+                                                            <label class="green-label processing-btn">Published</label>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <h3>Date</h3>
+                                                            <p>5 Mins ago</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-1 border-start">
+                                                        <a href="subjectadded.html" class="text-decoration-none">
+                                                            <i class="fs-4 fa-sharp fa-solid fa-pen position-relative top-50 start-50 translate-middle"
+                                                                style="color:grey"></i>
+                                                        </a>
+
+                                                    </div>
+                                                    <div id="chart-div4">
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn d-flex align-items-center">Change
+                                                                Difficulty
+                                                                <img src="../assets/arrow.svg" alt=""
+                                                                    class="mx-2"></button>
+                                                        </div>
+                                                        <hr>
+                                                        <div>
+                                                            <div class="d-flex">
+                                                                <div class="col-3">
+                                                                    <canvas id="myPieChart4" class="col-sm-4"></canvas>
+                                                                </div>
+                                                                <div class="col-8 d-flex flex-column m-3">
+                                                                    <label for="customRange1"
+                                                                        class="form-label easy-label">Easy</label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange1">
+
+                                                                    <label for="customRange2"
+                                                                        class="form-label moderate-label">Moderate</label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange2">
+
+                                                                    <label for="customRange3"
+                                                                        class="form-label difficult-label">Difficult
+                                                                    </label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange3">
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex justify-content-end">
+                                                                <button class="btn btn-dark my-4 ">Save &
+                                                                    Publish</button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-item">
+                                                <div class="row px-2">
+                                                    <div onclick="myFunction5()"
+                                                        class="text-decoration-none text-dark d-flex col-11">
+
+                                                        <div class="col-5">
+                                                            <h2>Technical Specific</h2>
+                                                            <p>Topics (10)</p>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <h3>Status</h3>
+                                                            <label class="green-label processing-btn">Published</label>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <h3>Date</h3>
+                                                            <p>5 Mins ago</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-1 border-start">
+                                                        <a href="subjectadded.html" class="text-decoration-none">
+                                                            <i class="fs-4 fa-sharp fa-solid fa-pen position-relative top-50 start-50 translate-middle"
+                                                                style="color:grey"></i>
+                                                        </a>
+
+                                                    </div>
+                                                    <div id="chart-div5">
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn d-flex align-items-center">Change
+                                                                Difficulty
+                                                                <img src="../assets/arrow.svg" alt=""
+                                                                    class="mx-2"></button>
+                                                        </div>
+                                                        <hr>
+                                                        <div>
+                                                            <div class="d-flex">
+                                                                <div class="col-3">
+                                                                    <canvas id="myPieChart5" class="col-sm-4"></canvas>
+                                                                </div>
+                                                                <div class="col-8 d-flex flex-column m-3">
+                                                                    <label for="customRange1"
+                                                                        class="form-label easy-label">Easy</label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange1">
+
+                                                                    <label for="customRange2"
+                                                                        class="form-label moderate-label">Moderate</label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange2">
+
+                                                                    <label for="customRange3"
+                                                                        class="form-label difficult-label">Difficult
+                                                                    </label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange3">
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex justify-content-end">
+                                                                <button class="btn btn-dark my-4 ">Save &
+                                                                    Publish</button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="list-item">
+                                                <div class="row px-2">
+                                                    <div onclick="myFunction6()"
+                                                        class="text-decoration-none text-dark d-flex col-11">
+
+                                                        <div class="col-5">
+                                                            <h2>Air Regulations</h2>
+                                                            <p>Topics (10)</p>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <h3>Status</h3>
+                                                            <label class="green-label processing-btn">Published</label>
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <h3>Date</h3>
+                                                            <p>5 Mins ago</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-1 border-start">
+                                                        <a href="subjectadded.html" class="text-decoration-none">
+                                                            <i class="fs-4 fa-sharp fa-solid fa-pen position-relative top-50 start-50 translate-middle"
+                                                                style="color:grey"></i>
+                                                        </a>
+
+                                                    </div>
+                                                    <div id="chart-div6">
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn d-flex align-items-center">Change
+                                                                Difficulty
+                                                                <img src="../assets/arrow.svg" alt=""
+                                                                    class="mx-2"></button>
+                                                        </div>
+                                                        <hr>
+                                                        <div>
+                                                            <div class="d-flex">
+                                                                <div class="col-3">
+                                                                    <canvas id="myPieChart6" class="col-sm-4"></canvas>
+                                                                </div>
+                                                                <div class="col-8 d-flex flex-column m-3">
+                                                                    <label for="customRange1"
+                                                                        class="form-label easy-label">Easy</label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange1">
+
+                                                                    <label for="customRange2"
+                                                                        class="form-label moderate-label">Moderate</label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange2">
+
+                                                                    <label for="customRange3"
+                                                                        class="form-label difficult-label">Difficult
+                                                                    </label>
+                                                                    <input type="range"
+                                                                        class="form-range chart-slider mb-3"
+                                                                        id="customRange3">
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex justify-content-end">
+                                                                <button class="btn btn-dark my-4 ">Save &
+                                                                    Publish</button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="card-body custom-card-body-mobile">
+                                            <div class="table-responsive text-capitalize">
+                                                <table class="table table-striped">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="container">
+
+
+                                                                <div class="row row-cols-2 ind-row-sm">
+
+                                                                    <div class="col-9 detail-label">
+                                                                        <div class="col-md-1">
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-2 customer-name-sm">
+                                                                        <i class="fs-4 fa-sharp fa-solid fa-pen"
+                                                                            style="color:grey"
+                                                                            onclick="myFunction6()"></i>
+
+                                                                    </div>
+                                                                    <div id="chart-div6">
+                                                                        <div class="d-flex justify-content-end">
+                                                                            <button
+                                                                                class="btn d-flex align-items-center">Change
+                                                                                Difficulty
+                                                                                <img src="../assets/arrow.svg" alt=""
+                                                                                    class="mx-2"></button>
+                                                                        </div>
+                                                                        <hr>
+                                                                        <div>
+                                                                            <div class="d-flex">
+                                                                                <div class="col-3">
+                                                                                    <canvas id="myPieChart6"
+                                                                                        class="col-sm-4"></canvas>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="col-8 d-flex flex-column m-3">
+                                                                                    <label for="customRange1"
+                                                                                        class="form-label easy-label">Easy</label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange1">
+
+                                                                                    <label for="customRange2"
+                                                                                        class="form-label moderate-label">Moderate</label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange2">
+
+                                                                                    <label for="customRange3"
+                                                                                        class="form-label difficult-label">Difficult
+                                                                                    </label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange3">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="d-flex justify-content-end">
+                                                                                <button class="btn btn-dark my-4 ">Save
+                                                                                    &
+                                                                                    Publish</button>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <a href="subjectadded.html"
+                                                                    class="text-decoration-none text-dark ">
+                                                                    <div class="row row-cols-2 ind-row-sm">
+
+                                                                        <div class="col-5 detail-label">
+                                                                            <div class="col-md-1">
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7 customer-name-sm">
+                                                                            <div>Air Regulations</div>
+                                                                            <div>Topics (10)</div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="row row-cols-2 ind-row-sm">
+                                                                        <div class="col-5 detail-label">Status</div>
+                                                                        <div class="col-7 custom-txt-sm">
+                                                                            <label
+                                                                                class="green-label processing-btn">Published</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row row-cols-2 ind-row-sm">
+                                                                        <div class="col-5 detail-label">Date</div>
+                                                                        <div class="col-7 custom-txt-sm"><span>5 Mins
+                                                                                ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="container">
+
+
+                                                                <div class="row row-cols-2 ind-row-sm">
+
+                                                                    <div class="col-9 detail-label">
+                                                                        <div class="col-md-1">
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-2 customer-name-sm">
+                                                                        <i class="fs-4 fa-sharp fa-solid fa-pen"
+                                                                            style="color:grey"
+                                                                            onclick="myFunction6()"></i>
+
+                                                                    </div>
+                                                                    <div id="chart-div6">
+                                                                        <div class="d-flex justify-content-end">
+                                                                            <button
+                                                                                class="btn d-flex align-items-center">Change
+                                                                                Difficulty
+                                                                                <img src="../assets/arrow.svg" alt=""
+                                                                                    class="mx-2"></button>
+                                                                        </div>
+                                                                        <hr>
+                                                                        <div>
+                                                                            <div class="d-flex">
+                                                                                <div class="col-3">
+                                                                                    <canvas id="myPieChart6"
+                                                                                        class="col-sm-4"></canvas>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="col-8 d-flex flex-column m-3">
+                                                                                    <label for="customRange1"
+                                                                                        class="form-label easy-label">Easy</label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange1">
+
+                                                                                    <label for="customRange2"
+                                                                                        class="form-label moderate-label">Moderate</label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange2">
+
+                                                                                    <label for="customRange3"
+                                                                                        class="form-label difficult-label">Difficult
+                                                                                    </label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange3">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="d-flex justify-content-end">
+                                                                                <button class="btn btn-dark my-4 ">Save
+                                                                                    &
+                                                                                    Publish</button>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <a href="subjectadded.html"
+                                                                    class="text-decoration-none text-dark ">
+                                                                    <div class="row row-cols-2 ind-row-sm">
+
+                                                                        <div class="col-5 detail-label">
+                                                                            <div class="col-md-1">
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7 customer-name-sm">
+                                                                            <div>Air Regulations</div>
+                                                                            <div>Topics (10)</div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="row row-cols-2 ind-row-sm">
+                                                                        <div class="col-5 detail-label">Status</div>
+                                                                        <div class="col-7 custom-txt-sm">
+                                                                            <label
+                                                                                class="orange-label on-hold-btn">Drafted</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row row-cols-2 ind-row-sm">
+                                                                        <div class="col-5 detail-label">Date</div>
+                                                                        <div class="col-7 custom-txt-sm"><span>5 Mins
+                                                                                ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="container">
+
+
+                                                                <div class="row row-cols-2 ind-row-sm">
+
+                                                                    <div class="col-9 detail-label">
+                                                                        <div class="col-md-1">
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-2 customer-name-sm">
+                                                                        <i class="fs-4 fa-sharp fa-solid fa-pen"
+                                                                            style="color:grey"
+                                                                            onclick="myFunction6()"></i>
+
+                                                                    </div>
+                                                                    <div id="chart-div6">
+                                                                        <div class="d-flex justify-content-end">
+                                                                            <button
+                                                                                class="btn d-flex align-items-center">Change
+                                                                                Difficulty
+                                                                                <img src="../assets/arrow.svg" alt=""
+                                                                                    class="mx-2"></button>
+                                                                        </div>
+                                                                        <hr>
+                                                                        <div>
+                                                                            <div class="d-flex">
+                                                                                <div class="col-3">
+                                                                                    <canvas id="myPieChart6"
+                                                                                        class="col-sm-4"></canvas>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="col-8 d-flex flex-column m-3">
+                                                                                    <label for="customRange1"
+                                                                                        class="form-label easy-label">Easy</label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange1">
+
+                                                                                    <label for="customRange2"
+                                                                                        class="form-label moderate-label">Moderate</label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange2">
+
+                                                                                    <label for="customRange3"
+                                                                                        class="form-label difficult-label">Difficult
+                                                                                    </label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange3">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="d-flex justify-content-end">
+                                                                                <button class="btn btn-dark my-4 ">Save
+                                                                                    &
+                                                                                    Publish</button>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <a href="subjectadded.html"
+                                                                    class="text-decoration-none text-dark ">
+                                                                    <div class="row row-cols-2 ind-row-sm">
+
+                                                                        <div class="col-5 detail-label">
+                                                                            <div class="col-md-1">
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7 customer-name-sm">
+                                                                            <div>Air Regulations</div>
+                                                                            <div>Topics (10)</div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="row row-cols-2 ind-row-sm">
+                                                                        <div class="col-5 detail-label">Status</div>
+                                                                        <div class="col-7 custom-txt-sm">
+                                                                            <label
+                                                                                class="green-label processing-btn">Published</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row row-cols-2 ind-row-sm">
+                                                                        <div class="col-5 detail-label">Date</div>
+                                                                        <div class="col-7 custom-txt-sm"><span>5 Mins
+                                                                                ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="container">
+
+
+                                                                <div class="row row-cols-2 ind-row-sm">
+
+                                                                    <div class="col-9 detail-label">
+                                                                        <div class="col-md-1">
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-2 customer-name-sm">
+                                                                        <i class="fs-4 fa-sharp fa-solid fa-pen"
+                                                                            style="color:grey"
+                                                                            onclick="myFunction6()"></i>
+
+                                                                    </div>
+                                                                    <div id="chart-div6">
+                                                                        <div class="d-flex justify-content-end">
+                                                                            <button
+                                                                                class="btn d-flex align-items-center">Change
+                                                                                Difficulty
+                                                                                <img src="../assets/arrow.svg" alt=""
+                                                                                    class="mx-2"></button>
+                                                                        </div>
+                                                                        <hr>
+                                                                        <div>
+                                                                            <div class="d-flex">
+                                                                                <div class="col-3">
+                                                                                    <canvas id="myPieChart6"
+                                                                                        class="col-sm-4"></canvas>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="col-8 d-flex flex-column m-3">
+                                                                                    <label for="customRange1"
+                                                                                        class="form-label easy-label">Easy</label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange1">
+
+                                                                                    <label for="customRange2"
+                                                                                        class="form-label moderate-label">Moderate</label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange2">
+
+                                                                                    <label for="customRange3"
+                                                                                        class="form-label difficult-label">Difficult
+                                                                                    </label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange3">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="d-flex justify-content-end">
+                                                                                <button class="btn btn-dark my-4 ">Save
+                                                                                    &
+                                                                                    Publish</button>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <a href="subjectadded.html"
+                                                                    class="text-decoration-none text-dark ">
+                                                                    <div class="row row-cols-2 ind-row-sm">
+
+                                                                        <div class="col-5 detail-label">
+                                                                            <div class="col-md-1">
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7 customer-name-sm">
+                                                                            <div>Air Regulations</div>
+                                                                            <div>Topics (10)</div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="row row-cols-2 ind-row-sm">
+                                                                        <div class="col-5 detail-label">Status</div>
+                                                                        <div class="col-7 custom-txt-sm">
+                                                                            <label
+                                                                                class="green-label processing-btn">Published</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row row-cols-2 ind-row-sm">
+                                                                        <div class="col-5 detail-label">Date</div>
+                                                                        <div class="col-7 custom-txt-sm"><span>5 Mins
+                                                                                ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="container">
+
+
+                                                                <div class="row row-cols-2 ind-row-sm">
+
+                                                                    <div class="col-9 detail-label">
+                                                                        <div class="col-md-1">
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-2 customer-name-sm">
+                                                                        <i class="fs-4 fa-sharp fa-solid fa-pen"
+                                                                            style="color:grey"
+                                                                            onclick="myFunction6()"></i>
+
+                                                                    </div>
+                                                                    <div id="chart-div6">
+                                                                        <div class="d-flex justify-content-end">
+                                                                            <button
+                                                                                class="btn d-flex align-items-center">Change
+                                                                                Difficulty
+                                                                                <img src="../assets/arrow.svg" alt=""
+                                                                                    class="mx-2"></button>
+                                                                        </div>
+                                                                        <hr>
+                                                                        <div>
+                                                                            <div class="d-flex">
+                                                                                <div class="col-3">
+                                                                                    <canvas id="myPieChart6"
+                                                                                        class="col-sm-4"></canvas>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="col-8 d-flex flex-column m-3">
+                                                                                    <label for="customRange1"
+                                                                                        class="form-label easy-label">Easy</label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange1">
+
+                                                                                    <label for="customRange2"
+                                                                                        class="form-label moderate-label">Moderate</label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange2">
+
+                                                                                    <label for="customRange3"
+                                                                                        class="form-label difficult-label">Difficult
+                                                                                    </label>
+                                                                                    <input type="range"
+                                                                                        class="form-range chart-slider mb-3"
+                                                                                        id="customRange3">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="d-flex justify-content-end">
+                                                                                <button class="btn btn-dark my-4 ">Save
+                                                                                    &
+                                                                                    Publish</button>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <a href="subjectadded.html"
+                                                                    class="text-decoration-none text-dark ">
+                                                                    <div class="row row-cols-2 ind-row-sm">
+
+                                                                        <div class="col-5 detail-label">
+                                                                            <div class="col-md-1">
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-7 customer-name-sm">
+                                                                            <div>Air Regulations</div>
+                                                                            <div>Topics (10)</div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="row row-cols-2 ind-row-sm">
+                                                                        <div class="col-5 detail-label">Status</div>
+                                                                        <div class="col-7 custom-txt-sm">
+                                                                            <label
+                                                                                class="green-label processing-btn">Published</label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="row row-cols-2 ind-row-sm">
+                                                                        <div class="col-5 detail-label">Date</div>
+                                                                        <div class="col-7 custom-txt-sm"><span>5 Mins
+                                                                                ago</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                            </div>
+                                            </table>
+                                        </div> -->
+
+
+                                        <div class="mt-4 card-body custom-card-body-mobile">
+                                            <div class="table-responsive text-capitalize">
+                                                <div class="table  ">
+                                                    <div>
+                                                        <!-- 1 record starts-->
+                                                        <div class="mb-4 bg-white rounded-3">
+                                                            <div class="container">
+
+                                                                <div onclick="myFunction7()"
+                                                                    class="text-decoration-none text-dark ">
+                                                                    <div class="row row-cols-2 ind-row-sm mb-3">
+
+                                                                        <div class="col-10 ">
+                                                                            <div class="mb-1 fw-bold">Air Regulations
+                                                                            </div>
+                                                                            <div class="detail-label fw-bold">Topics
+                                                                                (10)</div>
+
+                                                                        </div>
+                                                                        <div class="col-2 detail-label">
+
+                                                                            <div class="col-2 customer-name-sm ">
+                                                                                <a href="subjectadded.html">
+                                                                                    <i class="fs-4 fa-sharp fa-solid fa-pen"
+                                                                                        style="color:grey"></i>
+                                                                                </a>
+
+
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="row row-cols-2 ind-row-sm mb-3">
+
+                                                                        <div class="col-7 fw-bold">
+                                                                            <div class="text-dark mb-1 fw-bold ">Status
+                                                                            </div>
+                                                                            <label
+                                                                                class="green-label processing-btn">Published</label>
+                                                                        </div>
+                                                                        <div class="col-5 detail-label"></div>
+                                                                    </div>
+
+                                                                    <div class="row row-cols-2 ind-row-sm mb-3">
+
+                                                                        <div class="col-7 ">
+                                                                            <div class="text-dark mb-1 fw-bold ">Date
+                                                                            </div>
+                                                                            <div>5 Mins ago</div>
+
+                                                                        </div>
+                                                                        <div class="col-5 detail-label"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="chart-div7" class=" col-12">
+                                                                    <div class="d-flex justify-content-end">
+                                                                        <button
+                                                                            class="btn d-flex align-items-center">Change
+                                                                            Difficulty
+                                                                            <img src="../assets/arrow.svg" alt=""
+                                                                                class="mx-2"></button>
+                                                                    </div>
+                                                                    <hr>
+                                                                    <div>
+                                                                        <div class="d-flex">
+                                                                            <div class="col-3">
+                                                                                <canvas id="myPieChart6"
+                                                                                    class="col-sm-4"></canvas>
+                                                                            </div>
+                                                                            <div class="col-8 d-flex flex-column m-3">
+                                                                                <label for="customRange1"
+                                                                                    class="form-label easy-label">Easy</label>
+                                                                                <input type="range"
+                                                                                    class="form-range chart-slider mb-3"
+                                                                                    id="customRange1">
+
+                                                                                <label for="customRange2"
+                                                                                    class="form-label moderate-label">Moderate</label>
+                                                                                <input type="range"
+                                                                                    class="form-range chart-slider mb-3"
+                                                                                    id="customRange2">
+
+                                                                                <label for="customRange3"
+                                                                                    class="form-label difficult-label">Difficult
+                                                                                </label>
+                                                                                <input type="range"
+                                                                                    class="form-range chart-slider mb-3"
+                                                                                    id="customRange3">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="d-flex justify-content-end">
+                                                                            <button class="btn btn-dark my-4 ">Save
+                                                                                &
+                                                                                Publish</button>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                        <!--1 record ends -->
+
+                                                        <!-- 2 record starts-->
+                                                        <div class="mb-4 bg-white rounded-3">
+                                                            <div class="container">
+
+                                                                <div onclick="myFunction7()"
+                                                                    class="text-decoration-none text-dark ">
+                                                                    <div class="row row-cols-2 ind-row-sm mb-3">
+
+
+                                                                        <div class="col-10 ">
+                                                                            <div class="mb-1 fw-bold">Air Regulations
+                                                                            </div>
+                                                                            <div class="detail-label fw-bold">Topics
+                                                                                (10)</div>
+
+                                                                        </div>
+                                                                        <div class="col-2 detail-label">
+
+                                                                            <div class="col-2 customer-name-sm ">
+                                                                                <a href="subjectadded.html">
+                                                                                    <i class="fs-4 fa-sharp fa-solid fa-pen"
+                                                                                        style="color:grey"></i>
+                                                                                </a>
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="row row-cols-2 ind-row-sm mb-3">
+
+                                                                        <div class="col-7 fw-bold">
+                                                                            <div class="text-dark mb-1 fw-bold ">Status
+                                                                            </div>
+                                                                            <label
+                                                                                class="green-label processing-btn">Published</label>
+                                                                        </div>
+                                                                        <div class="col-5 detail-label"></div>
+                                                                    </div>
+
+                                                                    <div class="row row-cols-2 ind-row-sm mb-3">
+
+                                                                        <div class="col-7 ">
+                                                                            <div class="text-dark mb-1 fw-bold ">Date
+                                                                            </div>
+                                                                            <div>5 Mins ago</div>
+
+                                                                        </div>
+                                                                        <div class="col-5 detail-label"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="chart-div7" class=" col-12">
+                                                                    <div class="d-flex justify-content-end">
+                                                                        <button
+                                                                            class="btn d-flex align-items-center">Change
+                                                                            Difficulty
+                                                                            <img src="../assets/arrow.svg" alt=""
+                                                                                class="mx-2"></button>
+                                                                    </div>
+                                                                    <hr>
+                                                                    <div>
+                                                                        <div class="d-flex">
+                                                                            <div class="col-3">
+                                                                                <canvas id="myPieChart6"
+                                                                                    class="col-sm-4"></canvas>
+                                                                            </div>
+                                                                            <div class="col-8 d-flex flex-column m-3">
+                                                                                <label for="customRange1"
+                                                                                    class="form-label easy-label">Easy</label>
+                                                                                <input type="range"
+                                                                                    class="form-range chart-slider mb-3"
+                                                                                    id="customRange1">
+
+                                                                                <label for="customRange2"
+                                                                                    class="form-label moderate-label">Moderate</label>
+                                                                                <input type="range"
+                                                                                    class="form-range chart-slider mb-3"
+                                                                                    id="customRange2">
+
+                                                                                <label for="customRange3"
+                                                                                    class="form-label difficult-label">Difficult
+                                                                                </label>
+                                                                                <input type="range"
+                                                                                    class="form-range chart-slider mb-3"
+                                                                                    id="customRange3">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="d-flex justify-content-end">
+                                                                            <button class="btn btn-dark my-4 ">Save
+                                                                                &
+                                                                                Publish</button>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                        <!--2 record ends -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                        aria-labelledby="profile-tab" tabindex="0">2</div>
+                                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
+                                        aria-labelledby="contact-tab" tabindex="0">3</div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center bg-white footers">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>2022 &copy;&nbsp;PilotExamination.com | All Rights Reserved<br>
+                        Powered by Eighty5 Technologies Pvt Ltd</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Download Report <br>
+                        <span class="text-capitalize text-disabled term">select term</span>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-footer">
+                    <form>
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="from_date">From</label>
+                                <input type="date" class="form-control" placeholder="DD/MM/YY" name="from_date">
+                            </div>
+                            <div class="col-4">
+                                <label for="to_date">To</label>
+                                <input type="date" class="form-control" placeholder="DD/MM/YY" name="to_date">
+                            </div>
+                            <div class="col">
+                                <label for="download-btn">&nbsp;</label>
+                                <button class="btn btn-dark" id="download-btn">Download</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="dashboard.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

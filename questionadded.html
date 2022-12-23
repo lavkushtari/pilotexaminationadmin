@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+
+  <title>Add Questions</title>
+</head>
+
+<body>
+  <div class="navigation">
+    <nav class="navbar fixed-top navbar-light bg-white">
+      <div class="container-fluid container-mobile">
+        <a class="navbar-brand" href="dashboard.html">
+          <img src="assets/pilot-logo.svg" alt="logo" class="img-fluid">
+        </a>
+        <div class="d-flex gap-2 d-md-flex justify-content-md-end align-items-center container-div-mobile">
+          <!-- <button class="btn btn-light me-md-2" type="button"><i class="fa fa-search" aria-hidden="true"></i></button> -->
+          <form role="search" method="get" class="search-form top-nav-search-form hide-nav-btn-mobile" action="">
+            <span class="position-relative">
+              <i class="fa fa-2x fa-search top-nav-search position-absolute top-50 start-50 translate-middle"></i>
+              <input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:" />
+            </span>
+            <input type="submit" class="search-submit" value="Search" />
+          </form>
+
+          <button type="button" class="btn btn-link text-dark  hide-nav-btn-mobile">
+            <i class="fa-regular fa-2x fa-bell bell-parent"></i>
+          </button>
+          <button class="btn p-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            <div class="admin-group hide-nav-btn-mobile">
+              <img src="assets/profile2.svg" alt="" class="img-fluid rounded-circle" width="30">
+              <span class="text-capitalize">admin</span>
+            </div>
+          </button>
+          <div class="collapse position-absolute top-50 logout-btn-div" id="collapseExample">
+            <button class="btn btn-outline-dark my-4 rounded-3 py-2 "><img src="./assets/logout-img.svg" alt=""
+                class="me-3">Logout</button>
+          </div>
+
+        </div>
+        <button class="btn  text-dark offcanvas-toggle-btn" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"><i class="fa-solid fa-bars"></i>
+        </button>
+
+
+      </div>
+    </nav>
+  </div>
+  <div class="offcanvas offcanvas-start offcanvas-mobile-sidebar" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header position-absolute top-0 end-0 ">
+      <button type="button" class="btn-close text-reset " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <div class="d-flex align-items-center">
+          <a class="navbar-brand" href="dashboard.html">
+            <img src="../assets/pilot-logo.svg" alt="logo" class="img-fluid" width="120">
+          </a>
+        </div>
+        <nav class="nav top-navigation side-nav flex-column text-capitalize">
+          <a class="nav-link nav-link-navigation" href="dashboard.html">
+            <span class=" my-span mx-2">
+              <img src="./assets/dashboard-icon.svg" alt="">
+            </span><span class="">Dashboard</span> </a>
+          <a class="nav-link nav-link-navigation" href="orders.html">
+            <span class="mx-2 my-span">
+              <img src="./assets/order-icon.svg" alt="">
+            </span><span class="">orders</span>
+          </a>
+          <a class="nav-link nav-link-navigation" href="registeredusers.html">
+            <span class="mx-2 my-span">
+              <img src="./assets/user-icon.svg" alt="">
+            </span><span class="">users</span>
+          </a>
+          <a class="nav-link nav-link-navigation" href="subjectlist.html">
+            <span class="mx-2 my-span">
+              <img src="./assets/subject-icon.svg" alt="">
+            </span><span class="">subjects</span>
+          </a>
+          <ul class="mb-0 ms-4 list-unstyled">
+            <li>
+              <a class="nav-link nav-link-navigation" href="subsubjectlist.html">
+                <span class="mx-2 my-span">
+                  <img src="" alt="">
+                </span><span class="">mini subjects</span>
+              </a>
+            </li>
+          </ul>
+          <a class="nav-link nav-link-navigation" href="combolist.html">
+            <span class="mx-2 my-span">
+              <img src="./assets/combo-icon.svg" alt="">
+            </span><span class="">combo</span>
+          </a>
+          <a class="nav-link nav-link-navigation active " aria-current="page" href="questionbanklist.html">
+            <span class="mx-2 my-span">
+              <img src="./assets/question-bank-icon.svg" alt="">
+            </span><span class=""> question bank</span>
+          </a>
+          <a class="nav-link nav-link-navigation" href="reportedquestions.html">
+            <span class="mx-2 my-span">
+              <img src="./assets/reported-question-icon.svg" alt="">
+            </span><span class="">Reported Questions</span>
+          </a>
+          <a class="nav-link nav-link-navigation" href="couponlist.html">
+            <span class="mx-2 my-span">
+              <img src="./assets/coupon-icon.svg" alt="">
+            </span><span class="">Coupon Codes</span></a>
+          <a class="nav-link nav-link-navigation" href="promotion.html">
+            <span class="mx-2 my-span">
+              <img src="./assets/promotion-icon.svg" alt="">
+            </span><span class="">Promotions</span></a>
+        </nav>
+        <div>
+
+          <hr>
+          <div class="d-flex ms-2 my-4 flex-column">
+
+            <div class="admin-group">
+              <img src="assets/profile2.svg" alt="" class="img-fluid rounded-circle me-3" width="40">
+              <span class="text-capitalize fw-bold">admin</span>
+            </div>
+            <button class="btn btn-outline-dark my-4 rounded-3 py-2 text-dark"><img src="./assets/logout-img.svg" alt=""
+                class="me-3">Logout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-block">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 desktop-sidebar">
+          <nav class="nav top-navigation flex-column text-capitalize">
+            <a class="nav-link nav-link-navigation" href="dashboard.html">
+              <span class=" my-span mx-2">
+                <img src="./assets/dashboard-icon.svg" alt="">
+              </span><span class="">Dashboard</span> </a>
+            <a class="nav-link nav-link-navigation" href="orders.html">
+              <span class="mx-2 my-span">
+                <img src="./assets/order-icon.svg" alt="">
+              </span><span class="">orders</span>
+            </a>
+            <a class="nav-link nav-link-navigation" href="registeredusers.html">
+              <span class="mx-2 my-span">
+                <img src="./assets/user-icon.svg" alt="">
+              </span><span class="">users</span>
+            </a>
+            <a class="nav-link nav-link-navigation" href="subjectlist.html">
+              <span class="mx-2 my-span">
+                <img src="./assets/subject-icon.svg" alt="">
+              </span><span class="">subjects</span>
+            </a>
+            <ul class="mb-0 list-unstyled">
+              <li class="">
+                <a class="nav-link nav-link-navigation" href="subsubjectlist.html">
+                  <span class="mx-2 me-4 my-span">
+                    <img src="" alt="">
+                  </span><span class="">mini subjects</span>
+                </a>
+              </li>
+            </ul>
+            <a class="nav-link nav-link-navigation" href="combolist.html">
+              <span class="mx-2 my-span">
+                <img src="./assets/combo-icon.svg" alt="">
+              </span><span class="">combo</span>
+            </a>
+            <a class="nav-link nav-link-navigation active " aria-current="page" href="questionbanklist.html">
+              <span class="mx-2 my-span">
+                <img src="./assets/question-bank-icon.svg" alt="">
+              </span><span class=""> question bank</span>
+            </a>
+            <a class="nav-link nav-link-navigation" href="reportedquestions.html">
+              <span class="mx-2 my-span">
+                <img src="./assets/reported-question-icon.svg" alt="">
+              </span><span class="">Reported Questions</span>
+            </a>
+            <a class="nav-link nav-link-navigation" href="couponlist.html">
+              <span class="mx-2 my-span">
+                <img src="./assets/coupon-icon.svg" alt="">
+              </span><span class="">Coupon Codes</span></a>
+            <a class="nav-link nav-link-navigation" href="promotion.html">
+              <span class="mx-2 my-span">
+                <img src="./assets/promotion-icon.svg" alt="">
+              </span><span class="">Promotions</span></a>
+          </nav>
+        </div>
+        <div class="col-md-12 col-lg-10 bg-light px-4">
+          <div class="bread-crumb-block">
+            <nav
+              style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);"
+              aria-label="breadcrumb" class="my-4">
+              <ol class="breadcrumb text-capitalize">
+                <li class="breadcrumb-item"><i class="fa fa-home me-2" aria-hidden="true"></i>
+                  <a href="dashboard.html">dashboard</a>
+                </li>
+                <li class="breadcrumb-item"><a href="questionbanklist.html">Question Bank</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Air Meterology
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Atmosphere</li>
+              </ol>
+            </nav>
+            <p class="h3 text-capitalize text-dark text-bold d-flex justify-content-between align-items-center">
+              <span class="d-flex align-items-center">
+                <span class="d-inline-block"><a href="questionbanklist.html"><button class="btn back-btn"><img
+                        src="../assets/back.svg" /></button></a></span><span class="d-inline-block">Atmosphere</span>
+              </span>
+              <span class="d-flex end-0">
+                <button class=" btn btn-outline-secondary mx-2">Discard</button>
+              </span>
+
+            </p>
+            <hr>
+            <div class="row" id="report-block">
+
+              <div class="col-md-12 outer-div">
+                <!-- to be displayed if published -->
+                <div class="success-div ">
+                  <img src="../assets/check.svg" class="check" />
+                  <p class="main-p ">Added <span class="text-bold">“question”</span> to Atmosphere ,
+                    Meterology</p>
+                  <p> <a href="" style="color: green">View Question</a>&nbsp;
+                    <a href="" style="color: green">Add New question +</a>
+                  </p>
+                </div>
+                <!--published ends -->
+
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="inner-card-div mb-4">
+                      <div class="mb-3">
+                        <label for="question" class="form-label">Question</label>
+                        <input type="text" class="form-control" id="question" placeholder="Enter Your Question">
+                      </div>
+                      <div class="mb-3">
+                        <label for="optionA" class="form-label">Option A</label>
+                        <input type="text" class="form-control" id="optionA" placeholder="Enter Option A">
+                      </div>
+                      <div class="mb-3">
+                        <label for="optionB" class="form-label">Option B</label>
+                        <input type="text" class="form-control" id="optionB" placeholder="Enter Option B">
+                      </div>
+                      <div class="mb-3">
+                        <label for="optionC" class="form-label">Option C</label>
+                        <input type="text" class="form-control" id="optionC" placeholder="Enter Option C">
+                      </div>
+
+                      <label>Correct Answer</label><br />
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Select Option</option>
+                        <option value="Option-A">Option A </option>
+                        <option value="Option-B">Option B </option>
+                        <option value="Option-C">Option C</option>
+                      </select>
+
+                      <label class="text-bold">Solution</label>
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Explanation</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea2" class="form-label ">Add Image
+                          if any</label>
+                        <div class="upload-thumbnail-img-div">
+                          <input class="custom-question-input custom-file-input " type="file">
+                        </div>
+
+                      </div>
+
+                      <label>Difficulty Level </label><br />
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Select Option</option>
+                        <option value="Easy">Easy </option>
+                        <option value="Moderate">Moderate </option>
+                        <option value="Difficult">Difficult</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="inner-card-div">
+                      <a href="questionadded.html"><button class="btn add-btn btn-success">Publish</button></a><br />
+                      <button class="btn discard-btn">Save as a draft</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center bg-white footers">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>2022 &copy;&nbsp;PilotExamination.com | All Rights Reserved<br>
+            Powered by Eighty5 Technologies Pvt Ltd</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Download Report <br>
+            <span class="text-capitalize text-disabled term">select term</span>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        </div>
+        <div class="modal-footer">
+          <form>
+            <div class="row">
+              <div class="col-4">
+                <label for="from_date">From</label>
+                <input type="date" class="form-control" placeholder="DD/MM/YY" name="from_date">
+              </div>
+              <div class="col-4">
+                <label for="to_date">To</label>
+                <input type="date" class="form-control" placeholder="DD/MM/YY" name="to_date">
+              </div>
+              <div class="col">
+                <label for="download-btn">&nbsp;</label>
+                <button class="btn btn-dark" id="download-btn">Download</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Initialize tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
